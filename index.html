@@ -72,60 +72,7 @@
 
 
 <main role="main" class="s-page--inner main   no-image-banner" data-bs-spy="scroll"><!-- theme-pharma | theme-cosm -->
-      <nav role="navigation" class="quick-access">
-      <button class="quick-access__button quick-access__button--open js-open">
-        <i class="o-icon --list" aria-hidden="true"></i>
-        <strong>快速连接</strong>
-      </button>
-
-      <div class="quick-access__menu">
-        <button class="quick-access__button quick-access__button--close js-close">
-          <i class="o-icon --cross" aria-hidden="true"></i>
-          关闭
-        </button>
-        <ul class="c-quick-links">
-                      <li>
-              <a href="personal-care/product-finder.html" class="c-quick-links__item">
-                <span class="menu-title">个人护理成分</span>
-                                  <picture class="o-icon">
-                    <img src="sites/default/files/menu_icons/ingredients.svg" width="40" height="40" loading="lazy" class="img-fluid menu-icon" />
-                  </picture>
-                              </a>
-            </li>
-                      <li>
-              <a href="personal-care/formulation-finder.html" class="c-quick-links__item">
-                <span class="menu-title">个人护理配方</span>
-                                  <picture class="o-icon">
-                    <img src="sites/default/files/menu_icons/formules.svg" width="40" height="40" loading="lazy" class="img-fluid menu-icon" />
-                  </picture>
-                              </a>
-            </li>
-                      <li>
-              <a href="pharmaceuticals/product-finder.html" class="c-quick-links__item">
-                <span class="menu-title">医药产品</span>
-                                  <picture class="o-icon">
-                    <img src="sites/default/files/menu_icons/pillsbleu.svg" width="40" height="40" loading="lazy" class="img-fluid menu-icon" />
-                  </picture>
-                              </a>
-            </li>
-                      <li>
-              <a href="formulation-technologies.html" class="c-quick-links__item">
-                <span class="menu-title">药品制剂技​​术</span>
-                                  <picture class="o-icon">
-                    <img src="sites/default/files/menu_icons/formulation-technologies.svg" width="40" height="40" loading="lazy" class="img-fluid menu-icon" />
-                  </picture>
-                              </a>
-            </li>
-                      <li>
-              <a href="corporate-social-responsability.html" class="c-quick-links__item">
-                <span class="menu-title">我们的社会责任</span>
-                                  <picture class="o-icon">
-                    <img src="sites/default/files/menu_icons/plantvert.svg" width="40" height="40" loading="lazy" class="img-fluid menu-icon" />
-                  </picture>
-                              </a>
-            </li>
-                  </ul>
-      </div>
+      <nav role="navigation" class="quick-access" id="quickLinks">
     </nav>
   
   <a id="main-content" tabindex="-1"></a>
@@ -676,9 +623,9 @@
 <script>
  $("#header").load("header.html");
 $(document).ready(function() {
-                                     
-                                      $("#footer").load("footer.html");
-                                    });
+  $("#footer").load("footer.html");
+  $("#quickLinks").load("quickLinks.html");
+});
 </script>
 </body>
 </html>

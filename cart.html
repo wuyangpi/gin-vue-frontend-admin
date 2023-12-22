@@ -47,8 +47,13 @@
 <link rel="stylesheet" media="all" href="sites/default/files/css/css_P-B1OiN1dVBgQFS8CDY9LpJo9pPm1kstOPVwXZlf_9A.css" />
 <link rel="stylesheet" media="all" href="sites/default/files/css/css_CfAqE8UjmFObeJ-EWQr7CuI8o5xv3bQTdu0Ee6hJ1P0.css" />
 <link rel="stylesheet" media="all" href="sites/default/files/css/css_dkOFhq_9X734fPD7dLXkRMMA7X9jWxPleJsPlb151xk.css" />
-
-    
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("#header").load("header.html");
+  $("#footer").load("footer.html");
+});
+</script>
   </head>
   <body class="path-cart    bg- d-flex flex-column">
         <nav role="navigation" aria-label="Accès rapide au contenu">
@@ -60,7 +65,7 @@
       <div class="dialog-off-canvas-main-canvas d-flex flex-column h-100" data-off-canvas-main-canvas>
     
 
-<header role="banner" class="header">
+<header role="banner" class="header" id="header">
       
 <div class="region region-header-top d-none d-lg-block">
   <div class="container-wide">

@@ -52,6 +52,7 @@ $(document).ready(function() {
   $("#header").load("header.html");
   $("#footer").load("footer.html");
   $("#quickLinks").load("quickLinks.html");
+  $("#newsListContainer").load("template/c-card-event-li.html");
 });
 </script>
   </head>
@@ -88,13 +89,13 @@ $(document).ready(function() {
     <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
     <ol class="breadcrumb">
           <li class="breadcrumb-item">
-                  <a href="index.html">Home</a>
+                  <a href="index.html">首页</a>
               </li>
           <li class="breadcrumb-item">
-                  <a href="about-us.html">About us</a>
+                  <a href="about-us.html">关于我们</a>
               </li>
           <li class="breadcrumb-item">
-                  <a href="news.html">News &amp; Events</a>
+                  <a href="news.html">新闻事件</a>
               </li>
         </ol>
   </nav>
@@ -116,7 +117,7 @@ $(document).ready(function() {
     <div class="container">
       
       <h1 class="s-page__title u-title-styled">
-        News &amp; Events
+        新闻事件
       </h1>
       
 
@@ -126,9 +127,9 @@ $(document).ready(function() {
 <div class="modal--search__form s-page__header-search">
   <div class="form-item">
     <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keyword form-item-keyword">
-      <label for="edit-keyword">Keyword</label>
+      <label for="edit-keyword">请输入关键字</label>
         
-  <input placeholder="You are looking for..." data-drupal-selector="edit-keyword" type="text" id="edit-keyword" name="keyword" value="" size="30" maxlength="128" class="form-text form-control" />
+  <input placeholder="你要查找的是..." data-drupal-selector="edit-keyword" type="text" id="edit-keyword" name="keyword" value="" size="30" maxlength="128" class="form-text form-control" />
 
 
         </div>
@@ -146,13 +147,13 @@ $(document).ready(function() {
 
 <div class="custom--bef-links form-buttons">
           <a class="btn btn-outline-secondary is-active" href="news.html">
-      All
+      所有
     </a>
           <a class="btn btn-outline-secondary" href="news1b9c.html?type=75">
-      News
+      新闻
     </a>
           <a class="btn btn-outline-secondary" href="news28fb.html?type=74">
-      Events
+      事件
     </a>
   </div>
 
@@ -170,17 +171,17 @@ $(document).ready(function() {
     <aside class="s-page__aside s-page__aside--l" aria-label="filters" role="complementary">
       <button type="button" class="c-filter__mobile-btn btn btn-primary js-filter-btn-mobile">
         <span class="c-filter__txt-open">Filter the search</span>
-        <span class="c-filter__txt-close">Close filter</span>
+        <span class="c-filter__txt-close">取消筛选</span>
         <i class="o-icon --caret-circle-down" aria-hidden="true"></i>
       </button>
 
       <div class="c-filter e-form js-filter">
-        <button type="button" class="js-filter-btn-close c-filter__close-btn"><i class="o-icon --cross" aria-hidden="true"></i>Close</button>
+        <button type="button" class="js-filter-btn-close c-filter__close-btn"><i class="o-icon --cross" aria-hidden="true"></i>关闭</button>
 
         <div class="c-filter__header">
-          <h2 class="c-filter__main-title">Filters</h2>
+          <h2 class="c-filter__main-title">过滤器</h2>
 
-          <button type="reset" target="https://www.gattefosse.com/news" class="c-filter__reset-btn btn btn-outline-secondary">Reset filters
+          <button type="reset" target="https://www.gattefosse.com/news" class="c-filter__reset-btn btn btn-outline-secondary">充值过滤器
             <i class="o-icon --reset" aria-hidden="true"></i>
           </button>
         </div>
@@ -191,16 +192,16 @@ $(document).ready(function() {
     
       
 <div class="facets-widget-links">      <ul  data-drupal-facet-id="business_unit" data-drupal-facet-alias="business_unit" class="facet-inactive js-facets-links facet-list item-list__links"><li class="facet-item facets-reset">
-                      <a class="btn btn-outline-secondary is-active" href="news79f5.html?facets_query=">All our news and events (17)</a>
+                      <a class="btn btn-outline-secondary is-active" href="news79f5.html?facets_query=">所有的新闻和事件 (17)</a>
       
           </li><li class="facet-item">
-                      <a class="btn btn-outline-secondary" href="news46d8.html?f%5B0%5D=business_unit%3A9">Corporate (4)</a>
+                      <a class="btn btn-outline-secondary" href="news46d8.html?f%5B0%5D=business_unit%3A9">公司相关 (4)</a>
       
           </li><li class="facet-item">
-                      <a class="btn btn-outline-secondary" href="news473e.html?f%5B0%5D=business_unit%3A70">Personal care (9)</a>
+                      <a class="btn btn-outline-secondary" href="news473e.html?f%5B0%5D=business_unit%3A70">个人护理(9)</a>
       
           </li><li class="facet-item">
-                      <a class="btn btn-outline-secondary" href="news95bf.html?f%5B0%5D=business_unit%3A71">Pharmaceuticals (4)</a>
+                      <a class="btn btn-outline-secondary" href="news95bf.html?f%5B0%5D=business_unit%3A71">药用辅料 (4)</a>
       
           </li></ul>
 </div>
@@ -231,15 +232,15 @@ $(document).ready(function() {
       <button type="button" aria-expanded="true"
               class="panel-title accordion-button" data-bs-toggle="collapse"
               data-bs-target="#collapse-filtre-accordion-subject"
-              id="nav-filtre-accordion">Subjects</button>
+              id="nav-filtre-accordion">主题</button>
     </h3>
 
     <div id="collapse-filtre-accordion-subject" class="panel-collapse collapse show" role="region" aria-labelledby="heading-filtre-accordion-subject">
       <div class="panel-body accordion-body"><ul  data-drupal-facet-id="subject" data-drupal-facet-alias="subject" class="facet-inactive js-facets-checkbox-links facet-list item-list__checkbox">
             
-            <li class="facet-item"><a href="news83ec.html?f%5B0%5D=subject%3A739" rel="nofollow" data-drupal-facet-item-id="subject-739" data-drupal-facet-item-value="739" data-drupal-facet-item-count="1"><span class="facet-item__value">Personal care</span>
+            <li class="facet-item"><a href="news83ec.html?f%5B0%5D=subject%3A739" rel="nofollow" data-drupal-facet-item-id="subject-739" data-drupal-facet-item-value="739" data-drupal-facet-item-count="1"><span class="facet-item__value">个人护理</span>
 </a></li></ul>
-        <button class="link-more js-see-all" data-show="See all" data-hide="See less" aria-expanded="false">See all</button></div>
+        <button class="link-more js-see-all" data-show="See all" data-hide="See less" aria-expanded="false">查看所有</button></div>
     </div>
   </div></div>
 
@@ -250,339 +251,18 @@ $(document).ready(function() {
 
     <div class="s-page__content">
       
-              <div class="c-cards c-cards--vertical">
+              <div class="c-cards c-cards--vertical" id="newsListContainer">
           
-  
-  
-
-
-  <div class="c-card c-card--horizontal theme-cosm">
-    <div class="c-card__content">
-      
-      <h3 class="c-card__title">
-        <a class="c-card__title-link" href="news/gattefosse-won-gold-in-cosmetics-asia-2023-third-award-emulium-dermolea-mb.html">Gattefossé won Gold at in-cosmetics Asia 2023, third award for Emulium® Dermolea MB.</a>
-      </h3>
-      
-
-      <ul class="c-card__breadcrumb">
-        <li class="category">Personal care</li>
-      </ul>
-
-              <p class="c-card__info">
-                      <span class="c-card__date"><time datetime="2023-11-22T12:00:00Z" class="datetime">22 Nov 2023</time>
-</span>
-                            </p>
-      
-              <p class="c-card__summary">Gattefossé was once again rewarded for its new O/W emulsifier, receiving the gold medal.</p>
-      
-          </div>
-
-          <div class="c-card__image">
-        <img src="sites/default/files/styles/card_default/public/2023-11/thumbnail-incos-awards-dermolea2.jpg.jpg" alt="incos-awards-dermolea" width="369" height="208" class="card__image img-fluid" loading="lazy">
-      </div>
-      </div>
-
-
-
-  
-
-
-  <div class="c-card c-card--bordered c-card--event c-card--horizontal theme-cosm">
-    <div class="c-card__content">
-              <ul class="c-card__breadcrumb">
-          <li class="category">Personal care</li>
-        </ul>
-      
-      
-      <h3 class="c-card__title">Cosmet&#039;agora</h3>
-      
-
-      <div class="c-card__left">
-                  <p class="c-card__date">
-            <span class="date">16 - 17 Jan</span>
-            <span class="year">2024</span>
-          </p>
-        
-        <div class="c-card__event-info">
-                      <p class="c-card__place">
-                              Espace Champerret<br/>
-                                            Paris, France<br/>
-                                            Booth 167-168
-                          </p>
-          
-                  </div>
-      </div>
-      <div class="c-card__right">
-                  <p class="c-card__summary">Gattefossé France will be present at Cosmet'agora January 16-17, 2024.</p>
-        
-        
-              </div>
-    </div>
-  </div>
-
-
-
-  
-
-
-  <div class="c-card c-card--bordered c-card--event c-card--horizontal theme-cosm">
-    <div class="c-card__content">
-              <ul class="c-card__breadcrumb">
-          <li class="category">Personal care</li>
-        </ul>
-      
-      
-      <h3 class="c-card__title">HPCI India</h3>
-      
-
-      <div class="c-card__left">
-                  <p class="c-card__date">
-            <span class="date">18 - 19 Jan</span>
-            <span class="year">2024</span>
-          </p>
-        
-        <div class="c-card__event-info">
-                      <p class="c-card__place">
-                              Jio World Convention Centre<br/>
-                                            Mumbai, India<br/>
-                                        </p>
-          
-                  </div>
-      </div>
-      <div class="c-card__right">
-                  <p class="c-card__summary">Gattefossé India will be present at HPCI India January 18-19, 2024.</p>
-        
-        
-              </div>
-    </div>
-  </div>
-
-
-
-  
-
-
-  <div class="c-card c-card--bordered c-card--event c-card--horizontal theme-pharma">
-    <div class="c-card__content">
-              <ul class="c-card__breadcrumb">
-          <li class="category">Pharmaceuticals</li>
-        </ul>
-      
-      
-      <h3 class="c-card__title">Maghreb Pharma Expo</h3>
-      
-
-      <div class="c-card__left">
-                  <p class="c-card__date">
-            <span class="date">5 - 7 Feb</span>
-            <span class="year">2024</span>
-          </p>
-        
-        <div class="c-card__event-info">
-                      <p class="c-card__place">
-                              Palais des Expositions<br/>
-                                            Alger, Algeria<br/>
-                                            Booth F20
-                          </p>
-          
-                  </div>
-      </div>
-      <div class="c-card__right">
-                  <p class="c-card__summary">Gattefossé Mediterranean will be present at Maghreb Pharma Expo February 5-7, 2024.</p>
-        
-        
-              </div>
-    </div>
-  </div>
-
-
-
-  
-
-
-  <div class="c-card c-card--bordered c-card--event c-card--horizontal theme-pharma">
-    <div class="c-card__content">
-              <ul class="c-card__breadcrumb">
-          <li class="category">Pharmaceuticals</li>
-        </ul>
-      
-      
-      <h3 class="c-card__title">Nepal Pharma expo</h3>
-      
-
-      <div class="c-card__left">
-                  <p class="c-card__date">
-            <span class="date">15 - 17 Mar</span>
-            <span class="year">2024</span>
-          </p>
-        
-        <div class="c-card__event-info">
-                      <p class="c-card__place">
-                              Bhrikutimandap Exhibition Hall, Central Development Region<br/>
-                                            Katmandou, Nepal<br/>
-                                        </p>
-          
-                  </div>
-      </div>
-      <div class="c-card__right">
-                  <p class="c-card__summary">Gattefossé Asia Pacific will be present at Nepal Pharma expo from March 15 to 17, 2024.</p>
-        
-        
-              </div>
-    </div>
-  </div>
-
-
-
-  
-
-
-  <div class="c-card c-card--bordered c-card--event c-card--horizontal theme-pharma">
-    <div class="c-card__content">
-              <ul class="c-card__breadcrumb">
-          <li class="category">Pharmaceuticals</li>
-        </ul>
-      
-      
-      <h3 class="c-card__title">PBP World Meeting</h3>
-      
-
-      <div class="c-card__left">
-                  <p class="c-card__date">
-            <span class="date">18 - 21 Mar</span>
-            <span class="year">2024</span>
-          </p>
-        
-        <div class="c-card__event-info">
-                      <p class="c-card__place">
-                                            Vienna, Austria<br/>
-                                            Booth 17
-                          </p>
-          
-                  </div>
-      </div>
-      <div class="c-card__right">
-                  <p class="c-card__summary">Gattefossé will be present at PBP World Meeting from March 18 to 21, 2024.</p>
-        
-        
-              </div>
-    </div>
-  </div>
-
-
-
-  
-
-
-  <div class="c-card c-card--bordered c-card--event c-card--horizontal theme-cosm">
-    <div class="c-card__content">
-              <ul class="c-card__breadcrumb">
-          <li class="category">Personal care</li>
-        </ul>
-      
-      
-      <h3 class="c-card__title">PCHI China</h3>
-      
-
-      <div class="c-card__left">
-                  <p class="c-card__date">
-            <span class="date">20 - 22 Mar</span>
-            <span class="year">2024</span>
-          </p>
-        
-        <div class="c-card__event-info">
-                      <p class="c-card__place">
-                              World Expo Exhibition And Convention Center<br/>
-                                            Shanghai, China<br/>
-                                            Booth 1C02
-                          </p>
-          
-                  </div>
-      </div>
-      <div class="c-card__right">
-                  <p class="c-card__summary">Gattefossé China will be present at PCHI China from March 20 to 22, 2024.</p>
-        
-        
-              </div>
-    </div>
-  </div>
-
-
-  
-  
-
-
-  <div class="c-card c-card--horizontal theme-cosm">
-    <div class="c-card__content">
-      
-      <h3 class="c-card__title">
-        <a class="c-card__title-link" href="news/new-color-cosmetics-collection.html">New Color Cosmetics Collection</a>
-      </h3>
-      
-
-      <ul class="c-card__breadcrumb">
-        <li class="category">Personal care</li>
-      </ul>
-
-              <p class="c-card__info">
-                      <span class="c-card__date"><time datetime="2023-11-15T12:00:00Z" class="datetime">15 Nov 2023</time>
-</span>
-                                <span class="c-card__reading">Reading : 1mn</span>
-                  </p>
-      
-              <p class="c-card__summary">Discover a collection of 6 new formulas made according to current makeup trends.</p>
-      
-              <ul class="c-card__tag">
-          <li class="c-card__tag-item">Personal care</li>
-        </ul>
-          </div>
-
-          <div class="c-card__image">
-        <img src="sites/default/files/styles/card_default/public/2023-11/makeup-kit-24-group-photo-1.jpg.jpg" alt="Makeup kit 2023 - Color Cosmetics Essentials" width="369" height="208" class="card__image img-fluid" loading="lazy">
-      </div>
-      </div>
-
-
-  
-  
-
-
-  <div class="c-card c-card--horizontal theme-cosm">
-    <div class="c-card__content">
-      
-      <h3 class="c-card__title">
-        <a class="c-card__title-link" href="news/gattefosse-unveils-emulium-dermolea-mb-sensitive-skin-shield.html">Gattefossé unveils Emulium® Dermolea MB, the sensitive skin shield</a>
-      </h3>
-      
-
-      <ul class="c-card__breadcrumb">
-        <li class="category">Personal care</li>
-      </ul>
-
-              <p class="c-card__info">
-                      <span class="c-card__date"><time datetime="2023-03-20T12:00:00Z" class="datetime">20 Mar 2023</time>
-</span>
-                            </p>
-      
-              <p class="c-card__summary">Emulium® Dermolea MB, Gattefossé’s new plant-based O/W emulsifier, will officially launch at in-cosmetics global 2023 in Barcelona. </p>
-      
-          </div>
-
-          <div class="c-card__image">
-        <img src="sites/default/files/styles/card_default/public/2023-05/emullium-dermoleamb-369-208-px.png.png" alt="Emulium dermolea MB" width="369" height="208" class="card__image img-fluid" loading="lazy">
-      </div>
-      </div>
-
 
         </div>
       
                 <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
-    <h4 id="pagination-heading" class="pager__heading visually-hidden">Pagination</h4>
+    <h4 id="pagination-heading" class="pager__heading visually-hidden">分页</h4>
     <ul class="pager__items js-pager__items">
 
       <li class="pager__item pager__item--previous pager__item--disabled">
         <a href="#" title="Go to previous page" rel="prev">
-          <span class="visually-hidden">Previous page</span>
+          <span class="visually-hidden">前一页</span>
           <i class="o-icon --caret-right" aria-hidden="true"></i>
         </a>
       </li>
@@ -593,7 +273,7 @@ $(document).ready(function() {
       
       <li class="pager__item pager__item--next">
         <a href="news2679.html?page=1" title="Go to next page" rel="next">
-          <span class="visually-hidden">Next page</span>
+          <span class="visually-hidden">下一页</span>
           <i class="o-icon --caret-right" aria-hidden="true"></i>
         </a>
       </li>
@@ -615,133 +295,7 @@ $(document).ready(function() {
   <a href="#main-content" id="js_back-to-top" title="Revenir en haut de la page" class="c-back-to-top smoothHide d-none"></a>
 </main>
 
-  <footer role="contentinfo" class="footer">
-    
-  <div id="block-footerblock" data-block-plugin-id="footer_block" class="block block-gattefosse-core block-footer-block">
-  
-    
-      
-<div class="footer__top">
-  <div class="container">
-
-    <div class="footer__top-left">
-              <picture class="site-logo__picture">
-
-          <img src="sites/default/files/2023-02/logo.svg" alt="Gattefossé Logo"
-               width="93" height="52"
-               loading="lazy" class="img-fluid site-logo"/>
-        </picture>
-            <p class="site-slogan">People make our name</p>
-      <a href="find-us.html" class="btn btn-outline-primary btn-icon--r">
-        Locate us
-        <i class="o-icon --map-pin-line" aria-hidden="true"></i>
-      </a>
-    </div>
-
-    <div class="footer__top-center">
-      
-        <ul class="nav navbar-nav">
-            <li class="menu-icon menu-icon-50 nav-item">
-      <a href="news.html" class="nav-link active is-active" data-drupal-link-system-path="news">News &amp; Events</a>
-          </li>
-          <li class="menu-icon menu-icon-51 nav-item">
-      <a href="press.html" class="nav-link" data-drupal-link-system-path="node/520">Press</a>
-          </li>
-          <li class="menu-icon menu-icon-52 nav-item">
-      <a href="working-gattefosse.html" class="nav-link" data-drupal-link-system-path="node/645">Careers</a>
-          </li>
-          <li class="menu-icon menu-icon-53 nav-item">
-      <a href="https://www.fondation-gattefosse.org/en/" class="nav-link">Gattefossé Foundation</a>
-          </li>
-          <li class="menu-icon menu-icon-81 nav-item">
-      <a href="index.html" class="js-btn-cookie nav-link" data-drupal-link-system-path="&lt;front&gt;">Cookie management</a>
-          </li>
-  </ul>
-  
-
-
-    </div>
-
-    <div class="footer__top-right">
-      <h2 class="footer__top-right-title">Keep in touch</h2>
-      <ul class="menu--social-network">
-                  <li>
-            <a href="https://www.linkedin.com/company/gattefosse" target="_blank"
-               aria-label="Open new tab : linkedin Gattefossé"
-               class="menu--social-network__item">
-              <i class="o-icon --logo-linkedin" aria-hidden="true"></i>
-              Gattefossé
-            </a>
-          </li>
-                  <li>
-            <a href="https://www.linkedin.com/showcase/gattefosse-personal-care" target="_blank"
-               aria-label="Open new tab : linkedin Gattefossé Personal Care "
-               class="menu--social-network__item">
-              <i class="o-icon --logo-linkedin" aria-hidden="true"></i>
-              Gattefossé Personal Care 
-            </a>
-          </li>
-                  <li>
-            <a href="https://www.linkedin.com/showcase/gattefossé-pharmaceuticals" target="_blank"
-               aria-label="Open new tab : linkedin Gattefossé Pharmaceuticals"
-               class="menu--social-network__item">
-              <i class="o-icon --logo-linkedin" aria-hidden="true"></i>
-              Gattefossé Pharmaceuticals
-            </a>
-          </li>
-                  <li>
-            <a href="https://www.linkedin.com/showcase/fondation-gattefosse" target="_blank"
-               aria-label="Open new tab : linkedin Gattefossé Foundation "
-               class="menu--social-network__item">
-              <i class="o-icon --logo-linkedin" aria-hidden="true"></i>
-              Gattefossé Foundation 
-            </a>
-          </li>
-                  <li>
-            <a href="https://www.youtube.com/channel/UCUTYQ7BQ4odr5tvtsiReMlg" target="_blank"
-               aria-label="Open new tab : youtube Gattefossé"
-               class="menu--social-network__item">
-              <i class="o-icon --logo-youtube" aria-hidden="true"></i>
-              Gattefossé
-            </a>
-          </li>
-              </ul>
-    </div>
-
-  </div>
-</div>
-
-  </div>
-<nav aria-labelledby="block-bottommenu-menu" id="block-bottommenu" data-block-plugin-id="menu_block:bottom" class="block block-menu navigation menu--bottom">
-            
-  <p class="visually-hidden" id="block-bottommenu-menu">Bottom menu</p>
-  
-
-        
-        <div class="footer__bottom">
-      <div class="container">
-              <ul data-block="footer" class="nav navbar-nav menu--bottom">
-                                  <li class="menu-icon menu-icon-16 nav-item">
-            <a href="legal-notice.html" class="nav-link" data-drupal-link-system-path="node/208">Legal notice</a>
-                      </li>
-                            <li class="menu-icon menu-icon-103 nav-item">
-            <a href="terms-and-conditions.html" class="nav-link" data-drupal-link-system-path="node/503">Terms and Conditions</a>
-                      </li>
-                            <li class="menu-icon menu-icon-49 nav-item">
-            <a href="personal-data-policy.html" class="nav-link" data-drupal-link-system-path="node/209">Privacy policy</a>
-                      </li>
-                            <li class="menu-icon menu-icon-17 nav-item">
-            <a href="sitemap.html" class="nav-link" data-drupal-link-system-path="sitemap">Sitemap</a>
-                      </li>
-                </ul>
-      </div>
-    </div>
-  
-
-
-  </nav>
-
-
+  <footer role="contentinfo" class="footer" id="footer">
 
   </footer>
 

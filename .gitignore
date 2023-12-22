@@ -19,3 +19,7 @@
 
 # Go workspace file
 go.work
+.vscode/launch.json
+sites/default/files/.DS_Store
+sites/default/files/js/.DS_Store
+sites/default/files/.DS_Store
